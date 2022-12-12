@@ -1,5 +1,70 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+/*===========================
+  COMMON css 
+===========================*/
+:root {
+  --font-family: "Inter", sans-serif;
+  --primary: #155bd5;
+  --primary-dark: #1c3ab6;
+  --primary-light: #e2f1ff;
+  --accent: #00d4d7;
+  --dark: #121212;
+  --accent-dark: #00bac1;
+  --accent-light: #dff9f8;
+  --success: #13d527;
+  --success-dark: #00ae11;
+  --success-light: #eafbe7;
+  --secondary: #8f15d5;
+  --secondary-dark: #6013c7;
+  --secondary-light: #f4e5fa;
+  --info: #15b2d5;
+  --info-dark: #0f8ca8;
+  --info-light: #e0f5fa;
+  --caution: #dbbb25;
+  --caution-dark: #d58f15;
+  --caution-light: #fbf9e4;
+  --error: #e6185e;
+  --error-dark: #bf1257;
+  --error-light: #fce4eb;
+  --black: #1d1d1d;
+  --dark-1: #2d2d2d;
+  --dark-2: #4d4d4d;
+  --dark-3: #6d6d6d;
+  --gray-1: #8d8d8d;
+  --gray-2: #adadad;
+  --gray-3: #cdcdcd;
+  --gray-4: #e0e0e0;
+  --light-1: #efefef;
+  --light-2: #f5f5f5;
+  --light-3: #fafafa;
+  --white: #ffffff;
+  --gradient-1: linear-gradient(180deg, #155bd5 0%, #1c3ab6 100%);
+  --gradient-2: linear-gradient(180deg, #155bd5 13.02%, #00d4d7 85.42%);
+  --gradient-3: linear-gradient(180deg, #155bd5 0%, #8f15d5 100%);
+  --gradient-4: linear-gradient(180deg, #155bd5 0%, #13d527 100%);
+  --gradient-5: linear-gradient(180deg, #155bd5 0%, #15bbd5 100%);
+  --gradient-6: linear-gradient(180deg, #155bd5 0%, #dbbb25 100%);
+  --gradient-7: linear-gradient(180deg, #155bd5 0%, #e6185e 100%);
+  --gradient-8: linear-gradient(180deg, #1c3ab6 0%, #00bac1 100%);
+  --gradient-9: linear-gradient(180deg, #00d4d7 13.02%, #155bd5 85.42%);
+  --shadow-1: 0px 0px 1px rgba(40, 41, 61, 0.08),
+    0px 0.5px 2px rgba(96, 97, 112, 0.16);
+  --shadow-2: 0px 0px 1px rgba(40, 41, 61, 0.04),
+    0px 2px 4px rgba(96, 97, 112, 0.16);
+  --shadow-3: 0px 0px 2px rgba(40, 41, 61, 0.04),
+    0px 4px 8px rgba(96, 97, 112, 0.16);
+  --shadow-4: 0px 2px 4px rgba(40, 41, 61, 0.04),
+    0px 8px 16px rgba(96, 97, 112, 0.16);
+  --shadow-5: 0px 2px 8px rgba(40, 41, 61, 0.04),
+    0px 16px 24px rgba(96, 97, 112, 0.16);
+  --shadow-6: 0px 2px 8px rgba(40, 41, 61, 0.08),
+    0px 20px 32px rgba(96, 97, 112, 0.24);
+}
 .App {
   text-align: center;
+  /* background-color: var(--dark);
+  color: var(--white); */
 }
 
 .App-logo {
@@ -23,7 +88,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+body {
+  font-family: var(--font-family);
+  color: var(--black);
+  font-size: 16px;
+}
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +105,100 @@
     transform: rotate(360deg);
   }
 }
+
+
+h5.title_head {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+
+/* services */
+
+/*===========================
+  services css 
+===========================*/
+.services-eight {
+  padding: 50px 0 50px 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-eight {
+    padding: 80px 0 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .services-eight {
+    padding: 60px 0 30px 0;
+  }
+}
+.services-eight .single-services {
+  padding: 40px 30px;
+  border: 1px solid var(--light-1);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.services-eight .single-services:hover {
+  box-shadow: var(--shadow-4);
+}
+.services-eight .single-services:hover .service-icon {
+  color: var(--white);
+  border-color: transparent;
+  background: var(--primary);
+}
+.services-eight .single-services:hover .service-icon::after {
+  opacity: 1;
+  visibility: visible;
+}
+.services-eight .single-services .service-icon {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  background: var(--white);
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 40px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  position: relative;
+}
+.services-eight .single-services .service-icon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--primary);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  z-index: -1;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+.services-eight .single-services .service-content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.services-eight .single-services .service-content p {
+  color: var(--dark-3);
+}
+
