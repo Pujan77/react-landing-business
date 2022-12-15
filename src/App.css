@@ -1,5 +1,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap');
 /*===========================
   COMMON css 
 ===========================*/
@@ -39,6 +40,7 @@
   --light-2: #f5f5f5;
   --light-3: #fafafa;
   --white: #ffffff;
+  --nav-dark : #212529;
   --gradient-1: linear-gradient(180deg, #155bd5 0%, #1c3ab6 100%);
   --gradient-2: linear-gradient(180deg, #155bd5 13.02%, #00d4d7 85.42%);
   --gradient-3: linear-gradient(180deg, #155bd5 0%, #8f15d5 100%);
@@ -63,8 +65,8 @@
 }
 .App {
   text-align: center;
-  /* background-color: var(--dark);
-  color: var(--white); */
+  background-color: var(--dark);
+  color: var(--white);
 }
 
 .App-logo {
@@ -120,7 +122,7 @@ h5.title_head {
   services css 
 ===========================*/
 .services-eight {
-  padding: 50px 0 50px 0;
+  padding: 0 0 50px 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .services-eight {
@@ -147,7 +149,7 @@ h5.title_head {
   box-shadow: var(--shadow-4);
 }
 .services-eight .single-services:hover .service-icon {
-  color: var(--white);
+  color: var(--dark-1);
   border-color: transparent;
   background: var(--primary);
 }
@@ -160,7 +162,7 @@ h5.title_head {
   height: 78px;
   border-radius: 50%;
   margin-bottom: 25px;
-  background: var(--white);
+  background: var(--dark-1);
   border: 2px solid var(--primary);
   display: flex;
   align-items: center;
@@ -202,3 +204,49 @@ h5.title_head {
   color: var(--dark-3);
 }
 
+/* .hello_text_O{
+  font-weight: 900;
+  font-size: 30rem;
+  font-family: 'Dr Sugiyama';padding-right: 20px;
+  background: -webkit-linear-gradient(#27b0cd,rgb(61, 20, 77));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+.hello_text{
+  font-weight: 900;
+  font-size: 20rem; margin-left: 10px;
+  font-family: 'Dr Sugiyama';
+  background: -webkit-linear-gradient(#27b0cd,rgba(63,23,77,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ } */
+
+ p.title_subscript {
+  margin-left: 10px;
+}
+
+h5.title_head {
+  margin: 0 0 0 10px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.service_card.card {
+  background: var(--nav-dark);
+  border-radius: 12.8359px;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 8%);
+  height: 100%;
+  min-height: 200px;
+}
+
+.feature_title_Card.card-title.h5 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+
+/* scroller */
+.scroller_division{
+  margin: 0 50px;
+}

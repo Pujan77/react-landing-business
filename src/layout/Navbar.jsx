@@ -16,8 +16,8 @@ const NavigationBar = () => {
       >
         <Navbar.Brand>
           <div className="d-flex">
-            <h5 className="title_head">On Point</h5>
-            <p className="title_subscript">Software Solutions</p>
+            <h5 className="title_head">OnPoint </h5>
+            <p className="title_subscript">Software</p>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle

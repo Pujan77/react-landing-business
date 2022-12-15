@@ -10,12 +10,12 @@ const Features = () => {
           <div className="row">
             <div className="col-12">
               <div className="content">
-                <h6>Services</h6>
-                <h2 className="fw-bold">Our Best Services</h2>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form.
+                <h2 className="display-5 fw-bold lh-1 mb-3">
+                  Our Best Services
+                </h2>
+                <p className="lead">
+                  There are many variations of services available. Some of our
+                  common services include the following:
                 </p>
               </div>
             </div>
@@ -26,10 +26,12 @@ const Features = () => {
         <div className="row">
           {servicesContent.map((service, index) => (
             <div key={index} className="col-lg-4 col-md-6 mt-3">
-              <Card>
-                <div className="service-icon">{service.icon}</div>
+              <Card className="service_card">
+                <div className="service-icon mt-3">{service.icon}</div>
                 <Card.Body>
-                  <Card.Title>{service.title}</Card.Title>
+                  <Card.Title className="feature_title_Card">
+                    {service.title}
+                  </Card.Title>
                   <Card.Text>{service.desc}</Card.Text>
                 </Card.Body>
               </Card>
