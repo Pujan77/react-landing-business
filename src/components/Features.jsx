@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "react-bootstrap";
 import { servicesContent } from "../content";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Features = () => {
+  const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState(null);
+
+  const handleclick = (i) => {
+    // setToggle(!toggle);
+    setActive(i);
+  };
   return (
     <section id="services" className="services-area services-eight">
       <div className="section-title-five">
@@ -23,19 +32,39 @@ const Features = () => {
         </div>
       </div>
       <div className="container">
-        <div className="row">
+        <div className="row ">
           {servicesContent.map((service, index) => (
-            <div key={index} className="col-lg-4 col-md-6 mt-3">
-              <Card className="service_card">
-                <div className="service-icon mt-3">{service.icon}</div>
-                <Card.Body>
-                  <Card.Title className="feature_title_Card">
-                    {service.title}
-                  </Card.Title>
-                  <Card.Text>{service.desc}</Card.Text>
-                </Card.Body>
+            <motion.div
+              key={index}
+              className="col-lg-4 col-md-6 mt-3 "
+              onHoverStart={() => handleclick(index)}
+              onHoverEnd={() => setActive(null)}
+              layout
+            >
+              <Card
+                className={`${
+                  index === active ? "service_card_large" : ""
+                } service_card`}
+              >
+                {index !== active && (
+                  <Card.Body>
+                    <motion.div layout className="service-icon mt-3">
+                      {service.icon}
+                    </motion.div>
+                    <Card.Title className="feature_title_Card">
+                      {service.title}
+                    </Card.Title>
+
+                    <motion.div layout>
+                      <Card.Text>{service.desc}</Card.Text>
+                    </motion.div>
+                  </Card.Body>
+                )}
+                {index === active && (
+                  <InnerFeatureCard description={service.desctiption} />
+                )}
               </Card>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -44,3 +73,26 @@ const Features = () => {
 };
 
 export default Features;
+
+const InnerFeatureCard = ({ description }) => {
+  const navigate = useNavigate();
+  return (
+    <>
+      <Card.Body>
+        <div className="text-start">
+          <h5>The following stacks are used:</h5>
+          <ul>
+            {description.stacks.map((stack, i) => (
+              <li key={i}>{stack}</li>
+            ))}
+          </ul>
+        </div>
+      </Card.Body>
+      <Card.Footer>
+        <p className="routing_para_link" onClick={() => navigate("/")}>
+          Learn more {"->"}
+        </p>
+      </Card.Footer>
+    </>
+  );
+};

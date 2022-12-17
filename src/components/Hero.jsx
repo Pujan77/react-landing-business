@@ -24,7 +24,7 @@ const Hero = () => {
               type="button"
               className="btn btn-primary btn-lg px-4 me-md-2"
             >
-              Contact Us
+              Get in Touch
             </button>
             {/* <button
               type="button"
