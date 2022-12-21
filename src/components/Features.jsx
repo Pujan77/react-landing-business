@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const Features = () => {
+  const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState(null);
 
@@ -48,7 +49,11 @@ const Features = () => {
               >
                 {index !== active && (
                   <Card.Body>
-                    <motion.div layout className="service-icon mt-3">
+                    <motion.div
+                      layout
+                      className="service-icon mt-3"
+                      onClick={() => navigate(`${service.description.linkTo}`)}
+                    >
                       {service.icon}
                     </motion.div>
                     <Card.Title className="feature_title_Card">
@@ -80,16 +85,14 @@ const InnerFeatureCard = ({ description }) => {
     <>
       <Card.Body>
         <div className="text-start">
-          <h5>The following stacks are used:</h5>
-          <ul>
-            {description.stacks.map((stack, i) => (
-              <li key={i}>{stack}</li>
-            ))}
-          </ul>
+          <p>{description.stacks}</p>
         </div>
       </Card.Body>
       <Card.Footer>
-        <p className="routing_para_link" onClick={() => navigate("/")}>
+        <p
+          className="routing_para_link"
+          onClick={() => navigate(`${description.linkTo}`)}
+        >
           Learn more {"->"}
         </p>
       </Card.Footer>
