@@ -231,7 +231,8 @@ h5.title_head {
 }
 
 .service_card.card {
-  background: var(--nav-dark);
+  background: #efefef;
+  /* background: var(--nav-dark); */
   border-radius: 12.8359px;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
@@ -242,9 +243,14 @@ h5.title_head {
   
 }
 
+.service_card .card-body {
+  color: var(--nav-dark);
+}
+
 .service_card_large.card {
     transform: scale(1.05);
   z-index: 1;
+  color: var(--nav-dark);
 
 }
 
