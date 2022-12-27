@@ -6,10 +6,9 @@ import { testimonialContent } from "../content";
 
 const Testimonial = () => {
   return (
-    <section class="testimonial-section">
-      <div class="large-container">
-        <div class="sec-title">
-          <span class="title">Testimonial</span>
+    <section className="testimonial-section">
+      <div className="large-container">
+        <div className="sec-title">
           <h2>What Our core client say ?</h2>
         </div>
         <OwlCarousel
@@ -24,26 +23,24 @@ const Testimonial = () => {
         >
           {testimonialContent.map((item) => {
             return (
-              <>
-                <div class="item testimonial-block">
-                  <div class="inner-box">
-                    <div class="text">{item.text}</div>
-                    <div class="info-box">
-                      <div class="thumb">
-                        <img src={item.image} alt="" />
-                      </div>
-                      <h4 class="name">{item.name}</h4>
-                      <span class="designation">{item.position}</span>
+              <div className="item testimonial-block">
+                <div className="inner-box">
+                  <div className="text">{item.review}</div>
+                  <div className="info-box">
+                    <div className="thumb">
+                      <img src={item.profileImage} alt="" />
                     </div>
+                    <h4 className="name">{item.name}</h4>
+                    <span className="designation">{item.position}</span>
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
         </OwlCarousel>
 
-        <div class="thumb-layer paroller">
-          <figure class="image">
+        <div className="thumb-layer paroller">
+          <figure className="image">
             <img
               src="http://t.commonsupport.com/adro/images/resource/user-thumbs.png"
               alt=""

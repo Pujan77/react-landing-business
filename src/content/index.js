@@ -216,33 +216,31 @@ export const ReasonContent = {
 
 export const testimonialContent = [
   {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Hero",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
+    name: "Michael Davis",
+    review:
+      "I have been using this software for a few mostomer support team is always available to help with any questions or issues. The features and tools provided have greatly improved my productivity and saved me a lot of time. I highly recommend this software to anyone looking to streamline their operations.",
+    position: "Marketing Manager",
+    profileImage: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
   },
   {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Tiro",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
+    name: "Jessica Williams",
+    review:
+      "I have been using this software for my business for the past year and I am extremely happy with the results. The platform is reliable and user-friendly, and the customer service team is always available to help with any issues or questions. The features and tools provided have greatly improved my workflow and increased efficiency. I highly recommend this software to any business looking to streamline their operations.",
+    position: "CEO",
+    profileImage: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
   },
   {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Miro",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
+    name: "John Smith",
+    review:
+      "I have been using this software for my business for the past few months and I am extremely satisfied with the results. The platform is easy to use and the customer service team is always available to help with any issues or questions. The features and tools provided have greatly improved my productivity and saved me a lot of time. I highly recommend this software to any business looking to streamline their operations.",
+    position: "Project Manager",
+    profileImage: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
   },
   {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Kiro",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
-  },
-  {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Liro",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
+    name: "Rachel Thompson",
+    review:
+      "I have been using this software for my business for the past year and I am extremely impressed with the results. The platform is user-friendly and easy to navigate, and the customer service team is always available to help with any questions or issues. The features and tools provided have greatly improved my workflow and increased efficiency in my business. I highly recommend this software to anyone looking to streamline their operations.",
+    position: "Operations Manager",
+    profileImage: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
   },
 ];
