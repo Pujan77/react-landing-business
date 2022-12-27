@@ -3,6 +3,7 @@ import "./App.css";
 import { Landing } from "./pages";
 import { NavigationBar } from "./layout";
 import Contact from "./pages/Contact";
+import './assets/styles/style.scss'
 
 function App() {
   return (
