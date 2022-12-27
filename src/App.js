@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { NavigationBar } from "./layout";
 import { navigationItems } from "./content";
+import "./assets/styles/style.scss";
 
 function App() {
   return (
