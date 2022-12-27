@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Landing } from "./pages";
 import { NavigationBar } from "./layout";
-import Contact from "./pages/Contact";
+import { navigationItems } from "./content";
+import "./assets/styles/style.scss";
 
 function App() {
   return (
@@ -10,9 +10,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<NavigationBar />}>
-            <Route path="/" exact element={<Landing />} />
-            <Route path="/about" element={<Landing />} />
-            <Route path="/contact" element={<Contact />} />
+            {navigationItems.map((nav) => (
+              <Route
+                key={nav.title}
+                path={nav.to}
+                exact={nav.exact}
+                element={nav.component}
+              />
+            ))}
           </Route>
         </Routes>{" "}
       </BrowserRouter>

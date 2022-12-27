@@ -1,6 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import { servicesContent } from "../content";
+import { MarqueeContent } from "../content";
 
 const Scroller = ({ gradientType, hoverAction, speedHover }) => {
   return (
@@ -19,10 +19,13 @@ const Scroller = ({ gradientType, hoverAction, speedHover }) => {
         speed={speedHover}
         pauseOnHover={hoverAction}
       >
-        {servicesContent.map((item, index) => (
+        {MarqueeContent.map((item, index) => (
           <div key={index} className="scroller_division mt-3 mb-3">
-            {item.icon}
-            <p>{item.title}</p>
+            <img
+              style={{ height: "50px", width: "auto" }}
+              src={item.logo}
+              alt="logo"
+            />
           </div>
         ))}
       </Marquee>

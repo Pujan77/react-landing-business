@@ -4,15 +4,54 @@ import { MdMobileFriendly } from "react-icons/md";
 import { TfiWorld } from "react-icons/tfi";
 import { BiTestTube } from "react-icons/bi";
 import { GrHostMaintenance } from "react-icons/gr";
+import {
+  AJAX,
+  AWS,
+  AZURE,
+  DJANGO,
+  DOCKER,
+  DOTNET,
+  FIREBASE,
+  FLASK,
+  GCP,
+  HTML,
+  JAVASCRIPT,
+  JQUERY,
+  LARAVEL,
+  NODEJS,
+  PHP,
+  Programmer,
+  PYTHON,
+  REACT,
+  REACTNATIVE,
+  RUST,
+  SHOPIFY,
+  TERRAFORM,
+  VUE,
+  WEBFLOW,
+  WORDPRESS,
+} from "../assets";
+import { Landing } from "../pages";
+import Contact from "../pages/Contact";
 
 export const navigationItems = [
   {
     to: "/",
     title: "Home",
+    component: <Landing />,
+    exact: true,
   },
   {
     to: "/contact",
     title: "Contact",
+    component: <Contact />,
+    exact: false,
+  },
+  {
+    to: "/about",
+    title: "About",
+    component: <Landing />,
+    exact: false,
   },
 ];
 
@@ -124,4 +163,53 @@ export const servicesContent = [
 export const HeroContent = {
   title: `OnTime, OnTrack, OnPlace, OnPoint!`,
   body: "We have on point solution for all your software problems. With an experienced and dedicated team, we provide you with a right resolution, to all your needs",
+};
+
+export const MarqueeContent = [
+  { logo: LARAVEL },
+  { logo: NODEJS },
+  { logo: PHP },
+  { logo: PYTHON },
+  { logo: REACT },
+  { logo: REACTNATIVE },
+  { logo: RUST },
+  { logo: SHOPIFY },
+  { logo: TERRAFORM },
+  { logo: VUE },
+  { logo: WEBFLOW },
+  { logo: WORDPRESS },
+  { logo: AJAX },
+  { logo: AZURE },
+  { logo: AWS },
+  { logo: DJANGO },
+  { logo: DOCKER },
+  { logo: DOTNET },
+  { logo: FIREBASE },
+  { logo: FLASK },
+  { logo: HTML },
+  { logo: JAVASCRIPT },
+  { logo: JQUERY },
+  { logo: GCP },
+];
+
+export const ReasonContent = {
+  image: Programmer,
+  cardContents: [
+    {
+      title: "A",
+      text: "abc",
+    },
+    {
+      title: "A",
+      text: "abc",
+    },
+    {
+      title: "A",
+      text: "abc",
+    },
+    {
+      title: "A",
+      text: "abc",
+    },
+  ],
 };

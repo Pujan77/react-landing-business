@@ -274,3 +274,59 @@ p.routing_para_link{
 p.routing_para_link:hover{
   text-decoration: underline;
 }
+
+.features {
+  display: flex;
+}
+
+.feature {
+  flex: 1;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.feature:hover {
+  transform: translateX(-20px);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-form .form-control {
+  height: 50px;
+  border-radius: 0;
+}
+
+.contact-form .form-control:focus {
+  box-shadow: none;
+  border-color: #3498db;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form .btn {
+  border-radius: 0;
+  background-color: #3498db;
+  color: #ffffff;
+  font-size: 16px;
+  height: 50px;
+}
+
+.contact-form .btn:hover,
+.contact-form .btn:focus {
+  background-color: #2980b9;
+  outline: none;
+}
+
+.contact-form .alert {
+  margin-bottom: 20px;
+}
+
+.contact-form .invalid-feedback {
+  display: block;
+}
