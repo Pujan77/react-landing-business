@@ -213,3 +213,36 @@ export const ReasonContent = {
     },
   ],
 };
+
+export const testimonialContent = [
+  {
+    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
+    name: "Hero",
+    text: "This will have the long text",
+    position: "Ceo and nothing",
+  },
+  {
+    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
+    name: "Tiro",
+    text: "This will have the long text",
+    position: "Ceo and nothing",
+  },
+  {
+    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
+    name: "Miro",
+    text: "This will have the long text",
+    position: "Ceo and nothing",
+  },
+  {
+    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
+    name: "Kiro",
+    text: "This will have the long text",
+    position: "Ceo and nothing",
+  },
+  {
+    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
+    name: "Liro",
+    text: "This will have the long text",
+    position: "Ceo and nothing",
+  },
+];
