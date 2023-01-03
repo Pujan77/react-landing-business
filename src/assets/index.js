@@ -25,6 +25,12 @@ import VUE from "./logos/VUE.svg";
 import WEBFLOW from "./logos/WEBFLOW.svg";
 import WORDPRESS from "./logos/WORDPRESS.svg";
 import Programmer from "./images/Programmer.png";
+import OnPointAbout from "./images/OnPointAbout.png";
+import JaidenAli from "./images/photo/JaidenAli.jpg";
+import RivanLouis from "./images/photo/RivanLouis.jpg";
+import RodgerThompson from "./images/photo/RodgerThompson.jpg";
+import TylerSmile from "./images/photo/TylerSmile.jpg";
+import WillieJane from "./images/photo/WillieJane.jpg";
 export {
   FInalLogo_1,
   LARAVEL,
@@ -53,4 +59,10 @@ export {
   JAVASCRIPT,
   JQUERY,
   Programmer,
+  JaidenAli,
+  RivanLouis,
+  RodgerThompson,
+  TylerSmile,
+  WillieJane,
+  OnPointAbout,
 };

@@ -9,7 +9,7 @@ const Testimonial = () => {
     <section className="testimonial-section">
       <div className="large-container">
         <div className="sec-title">
-          <h2>What Our core client say ?</h2>
+          <h2>What out clients say ?</h2>
         </div>
         <OwlCarousel
           className="testimonial-carousel owl-carousel owl-theme"

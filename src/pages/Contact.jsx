@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { ContactForm } from "../content";
 
 const Contact = () => {
   const initialValues = {
@@ -45,20 +46,29 @@ const Contact = () => {
                   Your message has been sent successfully!
                 </div>
               ) : null}
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <Field
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="form-control"
-                />
-                <ErrorMessage
-                  component="div"
-                  name="email"
-                  className="invalid-feedback"
-                />
+              <div className="contact_page_form">
+                <h6 className="contact_form_title">
+                  Fill the information below to contact us
+                </h6>
+                {ContactForm.map((contact, i) => (
+                  <div className="form-group text-start">
+                    <label htmlFor={contact.name}>{contact.display}</label>
+                    <Field
+                      type={contact.type}
+                      name={contact.name}
+                      id={contact.name}
+                      placeholder={contact.placeHolder}
+                      className="form-control"
+                    />
+                    <ErrorMessage
+                      component="div"
+                      name={contact.name}
+                      className="invalid-feedback"
+                    />
+                  </div>
+                ))}
               </div>
+
               <button
                 type="submit"
                 className="btn btn-primary"

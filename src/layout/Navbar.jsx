@@ -36,6 +36,7 @@ const NavigationBar = () => {
         </Navbar.Collapse>
       </Navbar>{" "}
       <Outlet />
+      <hr />
       <Footer />
     </>
   );
