@@ -20,15 +20,6 @@ const Contact = () => {
   });
 
   const onSubmit = async (values, { setSubmitting, setStatus }) => {
-    // Send form data to the server using an API or a function
-    // sendFormData(values).then(() => {
-
-    // }).catch((error) => {
-
-    //   console.error(error);
-    // });
-    console.log(values);
-    console.log("form", form.current);
     emailjs
       .sendForm(
         `${process.env.REACT_APP_SERVICE_ID}`,
@@ -38,37 +29,15 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setSubmitting(false);
+          setStatus({ success: true });
+          form.current.reset();
         },
         (error) => {
-          console.log(error.text);
+          setSubmitting(false);
+          setStatus({ success: false });
         }
       );
-    // const res = await fetch("/api/sendgrid", {
-    //   body: JSON.stringify({
-    //     to: "pujansapkota7@gmail.com",
-    //     email: values.email,
-    //     receiverName: "Developer",
-    //     fullname: values.fullName,
-    //     subject: values.subject,
-    //     message: values.message,
-    //     url: "https://react-landing-business.vercel.app",
-    //   }),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   method: "POST",
-    // });
-
-    // const { error } = await res.json();
-    // if (error) {
-    //   console.log(error);
-    //   setSubmitting(false);
-    //   setStatus({ success: false });
-    //   return;
-    // }
-    // setSubmitting(false);
-    // setStatus({ success: true });
   };
 
   return (
