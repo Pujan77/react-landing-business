@@ -15,6 +15,7 @@ import {
   FLASK,
   GCP,
   HTML,
+  JaidenAli,
   JAVASCRIPT,
   JQUERY,
   LARAVEL,
@@ -24,11 +25,14 @@ import {
   PYTHON,
   REACT,
   REACTNATIVE,
+  RivanLouis,
+  RodgerThompson,
   RUST,
   SHOPIFY,
   TERRAFORM,
   VUE,
   WEBFLOW,
+  WillieJane,
   WORDPRESS,
 } from "../assets";
 import { Landing } from "../pages";
@@ -47,13 +51,42 @@ export const navigationItems = [
     component: <Contact />,
     exact: false,
   },
-  {
-    to: "/about",
-    title: "About",
-    component: <Landing />,
-    exact: false,
-  },
+  // {
+  //   to: "/about",
+  //   title: "About",
+  //   component: <Landing />,
+  //   exact: false,
+  // },
 ];
+
+export const FooterContent = {
+  heading: "OnPoint Software",
+  headingText:
+    "Product Driven software developement and Solutions for your technical queries.",
+  links: [
+    {
+      title: "About",
+      to: "about",
+    },
+    {
+      title: "Contact",
+      to: "contact",
+    },
+  ],
+  social: [
+    {
+      link: "/",
+      class: "fa fa-facebook-square mr-1",
+    },
+    {
+      link: "/",
+      class: "fa fa-linkedin-square",
+    },
+  ],
+  location: "United States",
+  contact: "+1 1111111111",
+  email: "abc@gmail.com",
+};
 
 export const servicesContent = [
   {
@@ -196,53 +229,82 @@ export const ReasonContent = {
   image: Programmer,
   cardContents: [
     {
-      title: "A",
-      text: "abc",
+      title: "Quality through communication",
+      color: "#22a7f5",
+      text: "Whether you go with a dedicated model or not, your product owner is available on a daily basis through stand-up meetings, chat messages or email to answer questions and ensure that what we deliver is what you asked for.",
     },
     {
-      title: "A",
-      text: "abc",
+      title: "It's your product,you own it.",
+      color: "#e3373d",
+      text: "It's as simple as that. We are here to manage and develop but these are your products and we treat them with all the security and safety that you would expect from an in-house development team.It's as simple as that. We are here to manage and develop but these are your products and we treat them with all the security and safety that you would expect from an in-house development team.",
     },
     {
-      title: "A",
-      text: "abc",
+      title: "A transparent process for everyone involved",
+      color: "#01ce7c",
+      text: "As we work through the process of development, ask real, deep questions. If you want data or insights talk to your product owner. If you want to meet your dev team we can make it happen.",
     },
     {
-      title: "A",
-      text: "abc",
+      title: "Connecting you to solutions",
+      color: "#f2ed13",
+      text: "As we work through the process of development, ask real, deep questions. If you want data or insights talk to your product owner. If you want to meet your dev team we can make it happen.",
     },
   ],
 };
 
 export const testimonialContent = [
   {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Hero",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
+    name: "Michael Davis",
+    review:
+      "I have been using this software for a few mostomer support team is always available to help with any questions or issues. The features and tools provided have greatly improved my productivity and saved me a lot of time. I highly recommend this software to anyone looking to streamline their operations.",
+    position: "Marketing Manager",
+    profileImage: JaidenAli,
   },
   {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Tiro",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
+    name: "Jessica Williams",
+    review:
+      "I have been using this software for my business for the past year and I am extremely happy with the results. The platform is reliable and user-friendly, and the customer service team is always available to help with any issues or questions. The features and tools provided have greatly improved my workflow and increased efficiency. I highly recommend this software to any business looking to streamline their operations.",
+    position: "CEO",
+    profileImage: WillieJane,
   },
   {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Miro",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
+    name: "John Smith",
+    review:
+      "I have been using this software for my business for the past few months and I am extremely satisfied with the results. The platform is easy to use and the customer service team is always available to help with any issues or questions. The features and tools provided have greatly improved my productivity and saved me a lot of time. I highly recommend this software to any business looking to streamline their operations.",
+    position: "Project Manager",
+    profileImage: RivanLouis,
   },
   {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Kiro",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
+    name: "Rodger Thompson",
+    review:
+      "I have been using this software for my business for the past year and I am extremely impressed with the results. The platform is user-friendly and easy to navigate, and the customer service team is always available to help with any questions or issues. The features and tools provided have greatly improved my workflow and increased efficiency in my business. I highly recommend this software to anyone looking to streamline their operations.",
+    position: "Operations Manager",
+    profileImage: RodgerThompson,
+  },
+];
+
+export const ContactForm = [
+  {
+    display: "Email",
+    placeHolder: "abc@gmail.com",
+    name: "email",
+    type: "email",
   },
   {
-    image: "http://t.commonsupport.com/adro/images/resource/thumb-1.jpg",
-    name: "Liro",
-    text: "This will have the long text",
-    position: "Ceo and nothing",
+    display: "Full Name",
+    placeHolder: "John Doe",
+    name: "fullName",
+    type: "text",
+  },
+  {
+    display: "Subject",
+    placeHolder: "Subject",
+    name: "subject",
+    type: "text",
+  },
+  {
+    display: "Message",
+    placeHolder: "Message",
+    name: "message",
+    type: "text",
   },
 ];

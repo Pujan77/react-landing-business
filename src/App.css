@@ -269,24 +269,11 @@ h5.title_head {
 p.routing_para_link{
   margin-bottom: 0;
   cursor: pointer;
+  color: var(--black);
 }
 
 p.routing_para_link:hover{
   text-decoration: underline;
-}
-
-.features {
-  display: flex;
-}
-
-.feature {
-  flex: 1;
-  text-align: center;
-  transition: transform 0.5s ease;
-}
-
-.feature:hover {
-  transform: translateX(-20px);
 }
 
 .contact-form {
@@ -330,3 +317,53 @@ p.routing_para_link:hover{
 .contact-form .invalid-feedback {
   display: block;
 }
+
+div.custom_card_features_body.card-body {
+background-color: var(--black);
+}
+
+
+img.d-block.mx-lg-auto.img-fluid {
+  border-radius: 25px;
+}
+
+
+section.reason_section {
+  max-height: 600px;
+}
+.reasons_wrapper.d-flex.justify-content-center {
+  height: 600px;
+}
+.col-lg-6.col-sm-12.col-md-6.column_image {
+  height: 100%;
+  width: auto;
+}
+
+.custom_reason_card.card {
+  height: 100%;
+  border-width: 2.5px;
+}
+
+img.card-img {
+  height: 100%;
+}
+
+.col-6.mb-1.feature_small_column {
+  height: 300px;
+  
+}
+
+.col-lg-6.col-sm-12.col-md-6.column_feature_blocks {
+  width: 624px;
+}
+h6.reason_small_title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+p.reason_small_text {
+  font-weight: 400;
+  font-size: 12px;
+}
+

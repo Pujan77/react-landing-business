@@ -68,6 +68,14 @@ const Features = () => {
                 {index === active && (
                   <InnerFeatureCard description={service.desctiption} />
                 )}
+                <Card.Footer>
+                  <p
+                    className="routing_para_link"
+                    onClick={() => navigate(`${service.description.linkTo}`)}
+                  >
+                    Learn more {"->"}
+                  </p>
+                </Card.Footer>
               </Card>
             </motion.div>
           ))}
@@ -80,7 +88,6 @@ const Features = () => {
 export default Features;
 
 const InnerFeatureCard = ({ description }) => {
-  const navigate = useNavigate();
   return (
     <>
       <Card.Body>
@@ -88,14 +95,6 @@ const InnerFeatureCard = ({ description }) => {
           <p>{description.stacks}</p>
         </div>
       </Card.Body>
-      <Card.Footer>
-        <p
-          className="routing_para_link"
-          onClick={() => navigate(`${description.linkTo}`)}
-        >
-          Learn more {"->"}
-        </p>
-      </Card.Footer>
     </>
   );
 };
