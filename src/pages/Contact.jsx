@@ -5,7 +5,7 @@ import { ContactForm } from "../content";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [status, setStatus] = useState(null);
+  const [statusForm, setStatusForm] = useState(null);
   const initialValues = {
     fullName: "",
     email: "",
@@ -32,12 +32,12 @@ const Contact = () => {
       .then(
         (result) => {
           setSubmitting(false);
-          setStatus({ success: true });
+          setStatusForm({ success: true });
           form.current.reset();
         },
         (error) => {
           setSubmitting(false);
-          setStatus({ success: false });
+          setStatusForm({ success: false });
         }
       );
   };
@@ -53,11 +53,13 @@ const Contact = () => {
         >
           {({ isSubmitting }) => (
             <Form ref={form} className="contact-form">
-              {status && status.success ? (
+              {statusForm && statusForm.success ? (
                 <div className="alert alert-success">
                   Your message has been sent successfully!
                 </div>
-              ) : null}
+              ) : (
+                <></>
+              )}
               <div className="contact_page_form">
                 <h6 className="contact_form_title">
                   Fill the information below to contact us
