@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { ContactForm } from "../content";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const initialValues = {
@@ -10,7 +11,7 @@ const Contact = () => {
     subject: "",
     message: "",
   };
-
+  const form = useRef();
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full name is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
@@ -18,16 +19,56 @@ const Contact = () => {
     message: Yup.string().required("Message is required"),
   });
 
-  const onSubmit = (values, { setSubmitting, setStatus }) => {
+  const onSubmit = async (values, { setSubmitting, setStatus }) => {
     // Send form data to the server using an API or a function
     // sendFormData(values).then(() => {
-    //   setSubmitting(false);
-    //   setStatus({ success: true });
+
     // }).catch((error) => {
-    //   setSubmitting(false);
-    //   setStatus({ success: false });
+
     //   console.error(error);
     // });
+    console.log(values);
+    console.log("form", form.current);
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_SERVICE_ID}`,
+        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        form.current,
+        `${process.env.REACT_APP_PROFILE_ID}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    // const res = await fetch("/api/sendgrid", {
+    //   body: JSON.stringify({
+    //     to: "pujansapkota7@gmail.com",
+    //     email: values.email,
+    //     receiverName: "Developer",
+    //     fullname: values.fullName,
+    //     subject: values.subject,
+    //     message: values.message,
+    //     url: "https://react-landing-business.vercel.app",
+    //   }),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   method: "POST",
+    // });
+
+    // const { error } = await res.json();
+    // if (error) {
+    //   console.log(error);
+    //   setSubmitting(false);
+    //   setStatus({ success: false });
+    //   return;
+    // }
+    // setSubmitting(false);
+    // setStatus({ success: true });
   };
 
   return (
@@ -40,7 +81,7 @@ const Contact = () => {
           onSubmit={onSubmit}
         >
           {({ isSubmitting, status }) => (
-            <Form className="contact-form">
+            <Form ref={form} className="contact-form">
               {status && status.success ? (
                 <div className="alert alert-success">
                   Your message has been sent successfully!
