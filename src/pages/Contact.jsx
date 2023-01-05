@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { ContactForm } from "../content";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [status, setStatus] = useState(null);
   const initialValues = {
     fullName: "",
     email: "",
@@ -19,7 +20,8 @@ const Contact = () => {
     message: Yup.string().required("Message is required"),
   });
 
-  const onSubmit = async (values, { setSubmitting, setStatus }) => {
+  const onSubmit = async (values, { setSubmitting }) => {
+    setSubmitting(true);
     emailjs
       .sendForm(
         `${process.env.REACT_APP_SERVICE_ID}`,
@@ -49,7 +51,7 @@ const Contact = () => {
           validationSchema={validationSchema}
           onSubmit={onSubmit}
         >
-          {({ isSubmitting, status }) => (
+          {({ isSubmitting }) => (
             <Form ref={form} className="contact-form">
               {status && status.success ? (
                 <div className="alert alert-success">
@@ -84,7 +86,7 @@ const Contact = () => {
                 className="btn btn-primary"
                 disabled={isSubmitting}
               >
-                Submit
+                {isSubmitting ? "Submit" : "Submitting"}
               </button>
             </Form>
           )}
