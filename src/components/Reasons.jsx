@@ -16,7 +16,7 @@ const Reasons = () => {
             <div className="row">
               {ReasonContent.cardContents.map((reason, index) => {
                 return (
-                  <div className="col-6 mb-1 feature_small_column" key={index}>
+                  <div className="col-sm-12 col-md-6 mb-1 feature_small_column" key={index}>
                     <Card
                       className="custom_reason_card"
                       style={{ borderColor: `${reason.color}` }}
