@@ -260,7 +260,10 @@
   }
   .testimonial-section .sec-title {
     margin-bottom: 25px;
-}
+  }
+  .stacks_used_wrapper {
+    padding-bottom: 30px;
+  }
 }
 img.contact-image {
   width: 100%;
@@ -284,4 +287,17 @@ img.contact-image {
 }
 nav.navbar {
   padding: 15px 20px;
+}
+.stacks_used_wrapper {
+  padding-bottom: 60px;
+}
+.marquee-container {
+  background: #f5f5f5;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+section.reason_section {
+  width: 98%;
+  margin: 0 auto;
 }

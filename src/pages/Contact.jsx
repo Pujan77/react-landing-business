@@ -91,7 +91,7 @@ const Contact = () => {
                 className="btn btn-primary"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Submit" : "Submitting"}
+                {isSubmitting ? "Submitting" : "Submit"}
               </button>
             </Form>
           )}

@@ -5,10 +5,10 @@ const Landing = () => {
   return (
     <div>
       <Hero />
+      <Scroller gradientType={false} hoverAction={true} speedHover={200} />
       <Reasons />
       <Testimonial />
       <Features />
-      <Scroller gradientType={false} hoverAction={true} speedHover={200} />
     </div>
   );
 };

@@ -305,6 +305,6 @@ export const ContactForm = [
     display: "Message",
     placeHolder: "Message",
     name: "message",
-    type: "text",
+    type: "textarea",
   },
 ];

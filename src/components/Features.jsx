@@ -38,8 +38,8 @@ const Features = () => {
             <motion.div
               key={index}
               className="col-lg-4 col-md-6 mt-3 "
-              onHoverStart={() => handleclick(index)}
-              onHoverEnd={() => setActive(null)}
+              // onHoverStart={() => handleclick(index)}
+              // onHoverEnd={() => setActive(null)}
               layout
             >
               <Card
@@ -68,14 +68,14 @@ const Features = () => {
                 {index === active && (
                   <InnerFeatureCard description={service.desctiption} />
                 )}
-                <Card.Footer>
+                {/* <Card.Footer>
                   <p
                     className="routing_para_link"
                     onClick={() => navigate(`${service.description.linkTo}`)}
                   >
                     Learn more {"->"}
                   </p>
-                </Card.Footer>
+                </Card.Footer> */}
               </Card>
             </motion.div>
           ))}
