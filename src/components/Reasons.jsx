@@ -7,12 +7,12 @@ const Reasons = () => {
     <section className="reason_section">
       <div className="reasons_wrapper d-flex justify-content-center">
         <div className="row reasons_row">
-          <div className="col-lg-6 col-sm-12 col-md-6 column_image">
+          <div className="col-lg-6 col-sm-12 col-md-12 column_image">
             <Card className="custom_reason_card">
               <CardImg src={ReasonContent.image} />
             </Card>
           </div>
-          <div className="col-lg-6 col-sm-12 col-md-6 column_feature_blocks">
+          <div className="col-lg-6 col-sm-12 col-md-12 column_feature_blocks">
             <div className="row">
               {ReasonContent.cardContents.map((reason, index) => {
                 return (

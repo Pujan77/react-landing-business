@@ -31,6 +31,7 @@ import RivanLouis from "./images/photo/RivanLouis.jpg";
 import RodgerThompson from "./images/photo/RodgerThompson.jpg";
 import TylerSmile from "./images/photo/TylerSmile.jpg";
 import WillieJane from "./images/photo/WillieJane.jpg";
+import ContactPhoto from "./images/contact.png";
 export {
   FInalLogo_1,
   LARAVEL,
@@ -64,5 +65,5 @@ export {
   RodgerThompson,
   TylerSmile,
   WillieJane,
-  OnPointAbout,
+  OnPointAbout,ContactPhoto
 };

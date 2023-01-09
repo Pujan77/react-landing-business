@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { ContactForm } from "../content";
 import emailjs from "@emailjs/browser";
+import { ContactPhoto } from "../assets";
 
 const Contact = () => {
   const [statusForm, setStatusForm] = useState(null);
@@ -44,8 +45,10 @@ const Contact = () => {
 
   return (
     <div className="row">
-      <div className="col col-6"></div>
-      <div className="col col-6">
+      <div className="col-sm-12 col-md-12 col-lg-6">
+          <img className="contact-image" src={ContactPhoto} alt="contact"/>
+      </div>
+      <div className="col-sm-12 col-md-12 col-lg-6 contact-form-wrap">
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
