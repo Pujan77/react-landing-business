@@ -351,7 +351,7 @@ img.card-img {
 }
 
 .col-6.mb-1.feature_small_column {
-  /* height: 300px; */
+  min-height: 300px;
   
 }
 

@@ -271,3 +271,13 @@ img.contact-image {
   display: flex;
   flex-wrap: wrap;
 }
+.custom_reason_card.card img.card-img {
+  height: 600px;
+  object-fit: cover;
+}
+.reasons_wrapper .custom_card_features_body.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
