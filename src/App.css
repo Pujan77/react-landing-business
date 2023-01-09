@@ -350,7 +350,7 @@ img.card-img {
   height: 100%;
 }
 
-.col-6.mb-1.feature_small_column {
+.feature_small_column {
   min-height: 300px;
   
 }
