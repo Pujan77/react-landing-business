@@ -29,13 +29,15 @@ const Footer = () => {
           </div>
           <div className="col-lg-4 col-xs-12 location">
             <h4 className="mt-lg-0 mt-sm-4">Location</h4>
-            <p>{FooterContent.location}</p>
+            <p>
+              <i className="fa fa-envelope-o mr-3"></i> {FooterContent.location}
+            </p>
             <p className="mb-0">
               <i className="fa fa-phone mr-3"></i> {FooterContent.contact}
             </p>
-            <p>
+            {/* <p>
               <i className="fa fa-envelope-o mr-3"></i> {FooterContent.email}
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="row mt-5">

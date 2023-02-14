@@ -65,8 +65,8 @@ export const FooterContent = {
     "Product Driven software developement and Solutions for your technical queries.",
   links: [
     {
-      title: "About",
-      to: "about",
+      title: "Home",
+      to: "/",
     },
     {
       title: "Contact",
@@ -83,9 +83,9 @@ export const FooterContent = {
       class: "fa fa-linkedin-square",
     },
   ],
-  location: "United States",
-  contact: "+1 1111111111",
-  email: "abc@gmail.com",
+  location: "990 Hwy. 287N, Ste 106 PMB 174, Mansfield, Texas 76063",
+  contact: "+1 8044538422",
+  // email: "abc@gmail.com",
 };
 
 export const servicesContent = [
