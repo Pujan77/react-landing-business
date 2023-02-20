@@ -37,6 +37,7 @@ import {
 } from "../assets";
 import { Landing } from "../pages";
 import Contact from "../pages/Contact";
+import Estimate from "../pages/Estimate";
 
 export const navigationItems = [
   {
@@ -51,12 +52,12 @@ export const navigationItems = [
     component: <Contact />,
     exact: false,
   },
-  // {
-  //   to: "/about",
-  //   title: "About",
-  //   component: <Landing />,
-  //   exact: false,
-  // },
+  {
+    to: "/estimate",
+    title: "Estimate",
+    component: <Estimate />,
+    exact: false,
+  },
 ];
 
 export const FooterContent = {
