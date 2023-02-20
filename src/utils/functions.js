@@ -18,3 +18,30 @@ export const mapCsvToFormData = (data) => {
 
   return formData;
 };
+
+export const calculateSums = (formData) => {
+  const sums = {
+    tasks: "Total",
+    backendHoursW: 0,
+    backendHoursR: 0,
+    backendHoursB: 0,
+    frontendHoursW: 0,
+    frontendHoursR: 0,
+    frontendHoursB: 0,
+    costBackend: 0,
+    costFrontEnd: 0,
+  };
+
+  formData.forEach((row) => {
+    sums.backendHoursW += parseFloat(row.backendHoursW);
+    sums.backendHoursR += parseFloat(row.backendHoursR);
+    sums.backendHoursB += parseFloat(row.backendHoursB);
+    sums.frontendHoursW += parseFloat(row.frontendHoursW);
+    sums.frontendHoursR += parseFloat(row.frontendHoursR);
+    sums.frontendHoursB += parseFloat(row.frontendHoursB);
+    sums.costBackend += parseFloat(row.costBackend);
+    sums.costFrontEnd += parseFloat(row.costFrontEnd);
+  });
+
+  return sums;
+};

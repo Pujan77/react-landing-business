@@ -369,3 +369,6 @@ p.reason_small_text {
   font-size: 12px;
 }
 
+tr.footer_dark {
+  font-weight: 700;
+}

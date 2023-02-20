@@ -52,6 +52,20 @@ export const navigationItems = [
     component: <Contact />,
     exact: false,
   },
+];
+export const routingItems = [
+  {
+    to: "/",
+    title: "Home",
+    component: <Landing />,
+    exact: true,
+  },
+  {
+    to: "/contact",
+    title: "Contact",
+    component: <Contact />,
+    exact: false,
+  },
   {
     to: "/estimate",
     title: "Estimate",
@@ -307,5 +321,101 @@ export const ContactForm = [
     placeHolder: "Message",
     name: "message",
     type: "textarea",
+  },
+];
+
+export const FormContent = [
+  {
+    name: "Task",
+    element: "tasks",
+    type: "textarea",
+    placeHolder: "Task name",
+  },
+  {
+    name: "Backend Worse",
+    element: "backendHoursW",
+    type: "text",
+    placeHolder: "Hours",
+  },
+  {
+    name: "Backend Realistic",
+    element: "backendHoursR",
+    type: "text",
+    placeHolder: "Hours",
+  },
+  {
+    name: "Backend Best",
+    element: "backendHoursB",
+    type: "text",
+    placeHolder: "Hours",
+  },
+  {
+    name: "Frontend Worse",
+    element: "frontendHoursW",
+    type: "text",
+    placeHolder: "Hours",
+  },
+  {
+    name: "Frontend Realistic",
+    element: "frontendHoursR",
+    type: "text",
+    placeHolder: "Hours",
+  },
+  {
+    name: "Frontend Best",
+    element: "frontendHoursB",
+    type: "text",
+    placeHolder: "Hours",
+  },
+  {
+    name: "Cost BE",
+    element: "costBackend",
+    type: "text",
+    placeHolder: "Price (Nrs)",
+  },
+  {
+    name: "Cost FE",
+    element: "costFrontEnd",
+    type: "text",
+    placeHolder: "Price (Nrs)",
+  },
+];
+
+export const TableContent = [
+  {
+    name: "Task",
+  },
+  {
+    name: "Backend Worse",
+  },
+  {
+    name: "Backend Realistic",
+  },
+  {
+    name: "Backend Best",
+  },
+  {
+    name: "Average Backend",
+  },
+  {
+    name: "Frontend Worse",
+  },
+  {
+    name: "Frontend Realistic",
+  },
+  {
+    name: "Frontend Best",
+  },
+  {
+    name: "Average Frontend",
+  },
+  {
+    name: "Cost BE",
+  },
+  {
+    name: "Cost FE",
+  },
+  {
+    name: "Total Cost",
   },
 ];
